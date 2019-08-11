@@ -11,6 +11,7 @@ services:
       - ./home/containers/nginx-proxy/certs:/etc/nginx/certs
       - ./home/containers/nginx-proxy/vhost.d:/etc/nginx/vhost.d
       - ./home/containers/nginx-proxy/share:/usr/share/nginx/html
+      - ./conf.d:/etc/nginx/conf.d
 
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
